@@ -1,0 +1,78 @@
+exchanges_config = {
+    "phase_1_active": ["woofi_pro", "hyperliquid"],
+    "phase_2_planned": ["vest", "extended", "paradex", "backpack", "hibachi"],
+    
+    "exchanges": {
+        "woofi_pro": {
+            "name": "WooFi Pro",
+            "type": "perp_dex", 
+            "infrastructure": "orderly_network",
+            "funding_frequency_hours": 8,
+            "funding_times_utc": [0, 8, 16],
+            "rate_limit_per_minute": 600,
+            "max_leverage": 50,
+            "min_order_size_usdc": 10,
+            "maker_fee": 0.0002,
+            "taker_fee": 0.0005,
+            "supported_assets": ["BTC", "ETH", "SOL", "AVAX", "MATIC", "DOT"],
+            "api_docs": "https://docs.orderly.network/"
+        },
+        
+        "hyperliquid": {
+            "name": "Hyperliquid",
+            "type": "perp_l1",
+            "infrastructure": "hyperliquid_l1", 
+            "funding_frequency_hours": 1,
+            "funding_times_utc": "every_hour",
+            "rate_limit_per_minute": 1200,
+            "max_leverage": 20,
+            "min_order_size_usdc": 1,
+            "maker_fee": 0.0002,
+            "taker_fee": 0.0003,
+            "supported_assets": ["BTC", "ETH", "SOL", "APT", "SUI", "DOGE", "PEPE"],
+            "api_docs": "https://hyperliquid.gitbook.io/hyperliquid-docs/"
+        },
+        
+        "vest": {
+            "name": "Vest Exchange",
+            "type": "perp_dex",
+            "funding_frequency_hours": 8,
+            "rate_limit_per_minute": 300,
+            "status": "phase_2"
+        },
+        
+        "extended": {
+            "name": "Extended Exchange", 
+            "type": "perp_dex",
+            "funding_frequency_hours": 8,
+            "rate_limit_per_minute": 500,
+            "status": "phase_2"
+        },
+        
+        "paradex": {
+            "name": "Paradex",
+            "type": "perp_dex",
+            "infrastructure": "starknet",
+            "funding_frequency_hours": 1,
+            "rate_limit_per_minute": 400,
+            "status": "phase_2"
+        },
+        
+        "backpack": {
+            "name": "Backpack Exchange",
+            "type": "perp_dex", 
+            "funding_frequency_hours": 8,
+            "rate_limit_per_minute": 1000,
+            "status": "phase_2"
+        },
+        
+        "hibachi": {
+            "name": "Hibachi Exchange",
+            "type": "perp_dex",
+            "infrastructure": "zk_proof",
+            "funding_frequency_hours": 8,
+            "rate_limit_per_minute": 200,
+            "status": "phase_2"
+        }
+    }
+}

@@ -1,0 +1,41 @@
+risk_config = {
+    "position_sizing": {
+        "max_position_size_usdc": 10000,
+        "max_capital_per_opportunity_percent": 20,
+        "min_position_size_usdc": 1000,
+        "position_size_scaling": {
+            "apr_500_plus": 1.0,
+            "apr_200_500": 0.8,
+            "apr_100_200": 0.6,
+            "apr_below_100": 0.4
+        }
+    },
+    
+    "entry_criteria": {
+        "min_entry_apr": 80,
+        "min_confidence_score": 0.3,
+        "max_funding_time_buffer_minutes": 10,
+        "min_liquidity_usdc": 50000
+    },
+    
+    "exit_criteria": {
+        "exit_apr_threshold": 50,
+        "stop_loss_apr": -5,
+        "max_hold_time_hours": 48,
+        "profit_taking_apr": 1000
+    },
+    
+    "risk_limits": {
+        "daily_loss_limit_usdc": 500,
+        "max_open_positions": 5,
+        "max_drawdown_percent": 10,
+        "correlation_limit": 0.7
+    },
+    
+    "emergency_stops": {
+        "consecutive_losses_limit": 5,
+        "rapid_loss_percent": 3,
+        "api_error_limit": 10,
+        "funding_rate_anomaly_threshold": 0.1
+    }
+}

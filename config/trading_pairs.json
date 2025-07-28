@@ -1,0 +1,43 @@
+trading_pairs_config = {
+    "priority_pairs": [
+        "BTC-PERP",
+        "ETH-PERP", 
+        "SOL-PERP",
+        "AVAX-PERP",
+        "DOGE-PERP"
+    ],
+    
+    "secondary_pairs": [
+        "MATIC-PERP",
+        "DOT-PERP",
+        "ADA-PERP",
+        "LINK-PERP",
+        "UNI-PERP"
+    ],
+    
+    "experimental_pairs": [
+        "PEPE-PERP",
+        "SHIB-PERP",
+        "APT-PERP",
+        "SUI-PERP",
+        "ARB-PERP"
+    ],
+    
+    "pair_settings": {
+        "BTC-PERP": {
+            "min_apr": 60,
+            "max_position_size": 15000,
+            "priority": 1
+        },
+        "ETH-PERP": {
+            "min_apr": 70,
+            "max_position_size": 12000,
+            "priority": 2
+        },
+        "SOL-PERP": {
+            "min_apr": 80,
+            "max_position_size": 10000,
+            "priority": 3
+        }
+    }
+}
